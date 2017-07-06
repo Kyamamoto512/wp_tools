@@ -258,7 +258,7 @@ function img_ssl($content){
 
 	foreach ((array)$matches[0] as $val){
 		if(preg_match('/src="(.*?)"/',$val,$matches2) && !preg_match('/^https/',$matches2[1])  ){
-			$content = str_replace($matches2[1],"/wp-includes/ssl/img/?url=".urlencode($matches2[1]),$content);
+			$content = str_replace($matches2[1],"/ssl/img/?url=".urlencode($matches2[1]),$content);
 		}
 	}
 
